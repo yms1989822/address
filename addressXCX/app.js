@@ -6,7 +6,7 @@ App({
     userid: "123321",
 
     //服务器地址
-    webUrl: 'http://10.1.30.120:8080/medicalrecord/',
+    webUrl: 'http://xx.xx.xx.xx:8080/medicalrecord/',
 
 
     //根据自己的业务来确定需要保存哪些字段
