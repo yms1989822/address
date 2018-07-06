@@ -1,0 +1,38 @@
+<view class='add_addr_view'>
+  <form bindsubmit="addrFormSubmit" report-submit="true">
+    <input hidden="true" value="{{id}}" name="id"></input>
+    <input hidden="true" value="{{userid}}" name="userid"></input>
+
+    <view class='addr_desc_view'>
+        <text class='addr_desc_text'>收件人</text>
+        <input value="{{name}}" name="name" maxlength='20' class='addr_value_input' placeholder="请填写收件人姓名"></input> 
+    </view>
+
+    <view class='addr_desc_view'>
+        <text class='addr_desc_text'>联系电话</text>
+        <input value="{{phone}}" name="phone" maxlength='20' type='number' class='addr_value_input' placeholder="请填写收件人电话"></input> 
+    </view>
+
+    <view class='addr_desc_view'>
+        <text class='addr_desc_text'>所在地区</text>
+        <picker name="addr" value="{{region}}" style='margin-top:40rpx' mode="region" bindchange="bindRegionChange">
+        <view wx:if="{{showRegion}}">
+          <text class='show_region_text'>{{showRegion}}</text>
+        </view>
+        <view wx:else>点击选择地址</view>
+        </picker>
+    </view>
+
+    <view class='textarea_view'>
+        <textarea value="{{addrRes}}" name="addrRes" class='addr_textarea' placeholder="详细地址" maxlength="80"></textarea>
+    </view>
+
+    <view class='addr_desc_view'>
+        <text class='addr_desc_text'>设为默认地址</text>
+        <switch name="isDefault" class='addr_switch' checked = "{{isDefault}}" bindchange="switchChangeEvent"/>
+    </view>
+
+  
+    <button class='add_addr_button' type='primary' form-type="submit">保存</button>
+  </form>
+</view>

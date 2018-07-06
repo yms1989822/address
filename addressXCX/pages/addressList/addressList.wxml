@@ -1,0 +1,54 @@
+<view class='addr_list_view'>
+    <view wx:for="{{addressList}}" wx:for-item="address" wx:key="addressId"> 
+      <view class='addr_column_view' data-index="{{index}}" bindtap='selectAddrEvent'>  
+        <view class='addr_view'>
+            <text class='addr_name_desc_text'>收件人：</text>
+            <text class='addr_text'>{{address.contact}}</text>
+            <text class='addr_text'>{{address.mobile}}</text>
+        </view>
+
+        <view class='addr_view'>
+            <text class='addr_name_desc_text'>收货地址：</text>
+            <text class='addr_text_long'>{{address.province}}{{address.city}}{{address.county}}</text>
+        </view>
+
+        <view class='addr_view'>
+            <text class='addr_text_res'>{{address.address}}</text>
+        </view>
+      </view>  
+
+      <view class='addr_view'>
+          <view bindtap='editEvent' data-index="{{index}}" class='addr_event_view'>
+              <image class='addr_image' src="../../images/edit_img.png"></image>
+              <text class='addr_event_text'>编辑</text>
+          </view>
+
+          <view bindtap='delEvent' data-index="{{index}}" class='addr_event_view'>
+              <image class='addr_image' src="../../images/delete_img.png"></image>
+              <text class='addr_event_text'>删除</text>
+          </view>
+
+          <view class='addr_event_select_view'>
+              <view wx:if="{{address.isdefault==1}}">
+                <text class='default_text'>默认地址</text>
+              </view>
+          </view> 
+          <!-- <view class='addr_event_select_view'>
+              <text>设为默认</text>
+        <view wx:if="{{address.isdefault==1}}">
+        <switch name="isDefault" class='addr_select_image' checked bindchange="switchChangeEvent"/>
+        </view>
+        <view wx:else>
+         <switch name="isDefault" class='addr_select_image' bindchange="switchChangeEvent"/>
+        </view> -->
+              
+          <!-- </view> -->
+      </view>
+      <view class='line'></view>
+
+    </view> 
+
+
+
+    <button bindtap='addAddrEvent' class='add_addr_button' type='primary'>添加收货地址</button>
+</view>

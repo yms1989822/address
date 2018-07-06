@@ -1,0 +1,50 @@
+.add_addr_view {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.addr_desc_text {
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  width: 40%;
+}
+
+.show_region_text {
+  font-size: 16px;
+}
+
+.addr_value_input {
+  margin-top: 40rpx;
+}
+
+.addr_desc_view {
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom:0.1rpx solid #c8c8c8;
+}
+
+.textarea_view {
+  width: 100%;
+  height: 250rpx;
+  border-bottom:0.1rpx solid #c8c8c8;
+}
+
+.addr_textarea {
+  width: 90%;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.addr_switch {
+  margin-top: 35rpx;
+  margin-left: 250rpx;
+}
+
+.add_addr_button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
